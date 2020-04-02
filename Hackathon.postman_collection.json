@@ -38,7 +38,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"jack\",\r\n    \"userName\": \"jack_001\",\r\n    \"password\": \"jacky\",\r\n    \"role_id\": \"INTERVIEWER\"\r\n}",
+					"raw": "{\r\n    \"name\": \"jack\",\r\n    \"userName\": \"jack_001\",\r\n    \"password\": \"jacky\",\r\n    \"roleId\": \"INTERVIEWER\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -46,12 +46,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user",
+					"raw": "http://localhost:8081/user",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8081",
 					"path": [
 						"user"
 					]
@@ -65,21 +65,21 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8082/users",
+					"raw": "http://localhost:8081/users ",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8081",
 					"path": [
-						"users"
+						"users "
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "delete user by ID",
+			"name": "delete user by Username",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -100,15 +100,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user/1716236184",
+					"raw": "http://localhost:8081/user/jack_001",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8081",
 					"path": [
 						"user",
-						"1716236184"
+						"jack_001"
 					]
 				}
 			},
@@ -120,15 +120,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8082/user/-868604219",
+					"raw": "http://localhost:8081/user/90717649",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8081",
 					"path": [
 						"user",
-						"-868604219"
+						"90717649"
 					]
 				}
 			},
@@ -136,6 +136,46 @@
 		},
 		{
 			"name": "Get Permission By User ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/perm/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"perm",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Permission By User Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/permByUserName/jack_001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"permByUserName",
+						"jack_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User By Role",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -259,12 +299,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8002/questions",
+					"raw": "http://localhost:8082/questions",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8002",
+					"port": "8082",
 					"path": [
 						"questions"
 					]
@@ -273,20 +313,40 @@
 			"response": []
 		},
 		{
-			"name": "update Obj Question by ID",
+			"name": "Get all Questions By Type",
 			"request": {
-				"method": "PUT",
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/questionsByType/SUBJECTIVE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"questionsByType",
+						"SUBJECTIVE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete question by ID",
+			"request": {
+				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"1\",\r\n    \"language\": \"JAVA\",\r\n    \"type\": \"OBJECTIVE\",\r\n    \"createdUserid\": \"3\",\r\n    \"statement\": \"In Java control statements break, continue, return, try-catch-finally and assert belongs to?\",\r\n    \"options\": \"Selection statements#Loop Statements#Transfer statements#Pause Statement\",\r\n    \"correct_option\": \"Transfer statements\"\r\n}",
+					"raw": "{\r\n    \"id\": \"729280953\",\r\n    \"firstName\": \"ankit\",\r\n    \"lastName\": \"gupta\",\r\n    \"email\": \"testankit@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -309,20 +369,20 @@
 			"response": []
 		},
 		{
-			"name": "delete question by ID",
+			"name": "update Obj Question by ID",
 			"request": {
-				"method": "DELETE",
+				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"729280953\",\r\n    \"firstName\": \"ankit\",\r\n    \"lastName\": \"gupta\",\r\n    \"email\": \"testankit@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"language\": \"JAVA\",\r\n    \"type\": \"OBJECTIVE\",\r\n    \"createdUserid\": \"3\",\r\n    \"statement\": \"In Java control statements break, continue, return, try-catch-finally and assert belongs to?\",\r\n    \"options\": \"Selection statements#Loop Statements#Transfer statements#Pause Statement\",\r\n    \"correct_option\": \"Transfer statements\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -548,6 +608,41 @@
 			"response": []
 		},
 		{
+			"name": "Schedule/Assign Question Bulk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"qidList\": [\"3\",\"4\"],\r\n        \"assigneduidList\": [\"jack_001\",\"root_user\",\"ADMIN\"],\r\n        \"assigneruid\": \"jack_001\"\r\n}\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/bulkAssignUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"bulkAssignUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get Scheduled Ques by Qid",
 			"request": {
 				"method": "GET",
@@ -638,6 +733,41 @@
 			"response": []
 		},
 		{
+			"name": "UnSchedule / Unassign Question Bulk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"qidList\": [\"3\",\"4\"],\r\n        \"assigneduidList\": [\"jack_001\",\"root_user\",\"ADMIN\"],\r\n        \"assigneruid\": \"jack_001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/bulkUnAssignUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"bulkUnAssignUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "getObjQuestion Result By User Id",
 			"request": {
 				"method": "GET",
@@ -713,6 +843,41 @@
 			"response": []
 		},
 		{
+			"name": "Validate Obj Ques",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\": \"test_user\",\n\t\"questionOptionMap\": {\"1\":\"Transfer statements\",\"2\":\"None of the above\",\"3\":\"Compile time error\"}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/validateObjQues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"validateObjQues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get Obj Ques Result By Key (user id and Q Id)",
 			"request": {
 				"method": "POST",
@@ -780,6 +945,101 @@
 					"port": "8083",
 					"path": [
 						"objRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Permission by Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/permByUserName/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"permByUserName",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Scheduled Questions By User Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/schQuesByUid/test_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schQuesByUid",
+						"test_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Scheduled Objective Questions By User Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/schObjQuesByUid/test_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schObjQuesByUid",
+						"test_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Obj Ques Result List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n\t\"key\": {\r\n\t\t\"userId\": \"test_user\",\r\n\t\t\"qid\": \"1\"\r\n\t},\r\n\t\"selectedoption\": \"Transfer statements\"\r\n},\r\n{\r\n\t\"key\": {\r\n\t\t\"userId\": \"test_user\",\r\n\t\t\"qid\": \"2\"\r\n\t},\r\n\t\"selectedoption\": \"None of the above\"\r\n},\r\n{\r\n\t\"key\": {\r\n\t\t\"userId\": \"test_user\",\r\n\t\t\"qid\": \"3\"\r\n\t},\r\n\t\"selectedoption\": \"Compile time error\"\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/addObjResList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"addObjResList"
 					]
 				}
 			},
