@@ -1,0 +1,1529 @@
+{
+	"info": {
+		"_postman_id": "df7ea7b2-57bb-48cb-aa3d-b71d6003b766",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/healthcheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pradeep\",\r\n    \"userId\": \"Pradeep@gmail.com\",\r\n    \"password\": \"pradeep123\",\r\n    \"roleId\": \"INTERVIEWER\",\r\n    \"experience\" : 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/aa/users ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"aa",
+						"users "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user by Username",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"729280953\",\r\n    \"firstName\": \"ankit\",\r\n    \"lastName\": \"gupta\",\r\n    \"email\": \"testankit@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/sandeepkumar@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"sandeepkumar@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/sandeep@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"sandeep@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Permission By User ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/perm/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"perm",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Permission By User Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/permByUserName/jack_001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"permByUserName",
+						"jack_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User By Role",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/perm/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"perm",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Sandeep\",\r\n    \"userId\": \"sandeep@gmail.com\",\r\n    \"password\": \"test\",\r\n    \"roleId\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/sandeepkumar@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"sandeepkumar@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"experience\": \"3-5\",\n    \"type\" : \"subjective\",\n    \"createdUserid\": \"3\",\n    \"statement\": \"Write a java program which will take two numbers and check whether the sum is prime or not.\",\n    \"methodName\": \"checkPrime\",\n    \"junitObj\" : null,\n    \"title\" : \"Inheritance & Collections\",\n    \"difficulty\" : \"Easy\",\n    \"expectedTime\" : \"20\",\n    \"technology\" : \"Java\",\n    \"topic\" : \"Advanced Core Java-1\",\n    \"junitText\" : \"Junit Testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validateLogin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/validateLogin/root_user/root",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"validateLogin",
+						"root_user",
+						"root"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Questions By Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/questionsByType/SUBJECTIVE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"questionsByType",
+						"SUBJECTIVE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete question by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"729280953\",\r\n    \"firstName\": \"ankit\",\r\n    \"lastName\": \"gupta\",\r\n    \"email\": \"testankit@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/question/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"question",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Obj Question by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"language\": \"JAVA\",\r\n    \"type\": \"OBJECTIVE\",\r\n    \"createdUserid\": \"3\",\r\n    \"statement\": \"In Java control statements break, continue, return, try-catch-finally and assert belongs to?\",\r\n    \"options\": \"Selection statements#Loop Statements#Transfer statements#Pause Statement\",\r\n    \"correct_option\": \"Transfer statements\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/question/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"question",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Question By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/question/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"question",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By UserName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/userid/sandeep@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"userid",
+						"sandeep@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user using userName",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Sandeep Kumar Yadav\",\r\n    \"userId\": \"sandeep@gmail.com\",\r\n    \"password\": \"test\",\r\n    \"roleId\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/userid/sandeepkumar@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"userid",
+						"sandeepkumar@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question_Subj",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 4,\n\t\"language\": \"JAVA\",\n\t\"type\": \"SUBJECTIVE\",\n\t\"experience\": \"3-5\",\n\t\"createdUserid\": \"3\",\n\t\"statement\": \"Write a java program which will take two numbers and check whether the sum is prime or not.\",\n\t\"methodName\": \"checkPrime\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Scheduled Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/schQues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schQues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule/Assign Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qid\": \"SubX41877X1587945237998\",\r\n    \"assigneduid\" : \"jack_001\",\r\n    \"assigneruid\" : \"Pradeep222@gmail.com\"\r\n}\r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/assignUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"assignUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule/Assign Question Bulk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"qidList\": [\"3\",\"4\"],\r\n        \"assigneduidList\": [\"jack_001\",\"root_user\",\"ADMIN\"],\r\n        \"assigneruid\": \"jack_001\"\r\n}\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/bulkAssignUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"bulkAssignUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Scheduled Ques by Qid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/schQues/SubX35797X1587407529052",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schQues",
+						"SubX35797X1587407529052"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Scheduled Ques by ScheduleQ Obj",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"qid\": \"3\",\r\n        \"assigneduid\": \"test_user\",\r\n        \"assigneruid\": \"jack_001\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/schQues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schQues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnSchedule / Unassign Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"qid\": \"3\",\r\n        \"assigneduid\": \"test_user\",\r\n        \"assigneruid\": \"jack_001\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/unAssignUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"unAssignUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnSchedule / Unassign Question Bulk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"qidList\": [\"3\",\"4\"],\r\n        \"assigneduidList\": [\"jack_001\",\"root_user\",\"ADMIN\"],\r\n        \"assigneruid\": \"jack_001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/bulkUnAssignUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"bulkUnAssignUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getObjQuestion Result By User Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/objResByUserId/test_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"objResByUserId",
+						"test_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getObjQuestion Result By Ques Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/objResByQId/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"objResByQId",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Obj Ques Result",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\": {\n\t\t\"userId\": \"test_user\",\n\t\t\"qid\": \"1\"\n\t},\n\t\"selectedoption\": \"Transfer statements\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/addObjRes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"addObjRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Obj Ques",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"jack_001\",\n    \"responseList\": [\n        {\n            \"qId\": \"3\",\n            \"userInput\": \"None of the above\"\n        },\n        {\n            \"qId\": \"6\",\n            \"userInput\": \"None of the above\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/validateObjQues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"validateObjQues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Obj Ques Result By Key (user id and Q Id)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\": {\n\t\t\"userId\": \"test_user\",\n\t\t\"qid\": \"3\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/objRes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"objRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Obj Ques Result",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\": {\n\t\t\"userId\": \"test_user\",\n\t\t\"qid\": \"3\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/objRes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"objRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Permission by Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/permByUserName/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"permByUserName",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Scheduled Questions By User Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/schQuesByUid/Example111@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schQuesByUid",
+						"Example111@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Scheduled Objective Questions By User Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/schObjQuesByUid/Example111@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schObjQuesByUid",
+						"Example111@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Obj Ques Result List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n\t\"key\": {\r\n\t\t\"userId\": \"test_user\",\r\n\t\t\"qid\": \"1\"\r\n\t},\r\n\t\"selectedoption\": \"Transfer statements\"\r\n},\r\n{\r\n\t\"key\": {\r\n\t\t\"userId\": \"test_user\",\r\n\t\t\"qid\": \"2\"\r\n\t},\r\n\t\"selectedoption\": \"None of the above\"\r\n},\r\n{\r\n\t\"key\": {\r\n\t\t\"userId\": \"test_user\",\r\n\t\t\"qid\": \"3\"\r\n\t},\r\n\t\"selectedoption\": \"Compile time error\"\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/addObjResList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"addObjResList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send email without attachement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"Santosh Verma\",\n    \"mailSubject\": \"Mail from CCT Tool\",\n    \"toEmailAddress\": \"mail4uyadav@gmail.com\",\n    \"messageText\": \"Hello , This is a test email from VCTI CCT tool.Thanks for using VCTI mail Service.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/send-mail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"send-mail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Sub Ques",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"jack_001\",\n    \"quesResponseObj\": {\n        \"qId\": \"4\",\n        \"userInput\": \"public class ExampleClass {public static void main(String arg[]) {System.out.println(\\\"Hello World\\\")}}\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/validateSubjQues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"validateSubjQues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DynamicDB Query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "renameTableColumn",
+						"value": "alter table rbac.user rename username to userid",
+						"type": "text"
+					},
+					{
+						"key": "addTableColumn",
+						"value": "alter table rbac.questions add title text",
+						"type": "text"
+					},
+					{
+						"key": "dropTableColumn",
+						"value": "alter table rbac.questions drop title",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"queries\": [\n        \"alter table rbac.user rename username to userid\",\n        \"alter table rbac.questions add title text\",\n        \"alter table rbac.subjectiveq add expectedtime text\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/execute/query",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"execute",
+						"query"
+					]
+				},
+				"description": "\"alter table rbac.user rename username to userid\"\n\"alter table rbac.questions add title text\"\n\"alter table rbac.subjectiveq add expectedtime time\""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Technology",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"technology\" : \"Python\",\n\t\"topic\" : \"Core Java2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/add/technology",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"add",
+						"technology"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Technologies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/technology/name/Java",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"technology",
+						"name",
+						"Java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Technology Key Value Pair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/technology/key/Java",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"technology",
+						"key",
+						"Java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Subjective Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"experience\": \"3-5\",\n    \"createdUserid\": \"3\",\n    \"statement\": \"Write a java program which will take two numbers and check whether the sum is prime or not.\",\n    \"methodName\": \"checkPrime\",\n    \"junitObj\" : null,\n    \"title\" : \"Inheritance & Collections\",\n    \"difficulty\" : \"Easy\",\n    \"expectedTime\" : \"20\",\n    \"technology\" : \"Java\",\n    \"topic\" : \"Advanced Core Java-1\",\n    \"junitText\" : \"Junit Testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/add/sub/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"add",
+						"sub",
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Objective Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"experience\": \"3-5\",\n    \"createdUserid\": \"3\",\n    \"statement\": \"class A{void m1(){System.out.println(\\\"In m1 A\\\");}}class B extends A{void m1(){System.out.println(\\\"In m1 B\\\");}void m2(){System.out.println(\\\"In m2 B\\\");}}public class Test { public static void main(String[] args) {A a=new B();a.m2();}}\",\n    \"options\": [\n        \"In m2 B\",\n        \"#Compile time error\",\n        \"#Runtime error\",\n        \"#None of the Above\"\n    ],\n    \"correct_option\": \"Compile time error\",\n    \"title\": \"Objective Multichoice Questions\",\n    \"difficulty\": \"Easy\",\n    \"technology\": \"Java\",\n    \"topic\": \"Advanced Core Java-1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/add/obj/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"add",
+						"obj",
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Technologies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/technologies",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"technologies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Questions Based On Type & Technology",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/questions/type/objective/tech/Java",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"questions",
+						"type",
+						"objective",
+						"tech",
+						"Java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Subjective Questions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"SandeepUser\",\n    \"quesResponseObj\": {\n        \"qId\": \"SubX66770X1587407857483\",\n        \"userInput\": \"public class ExampleClass {public String concat(String s1, String s2) { return s1 + s2;}}\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/validateSubjQues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"validateSubjQues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Question Based on Type Only",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/questions/type/objective",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"questions",
+						"type",
+						"objective"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Qestions Based on Technology Only",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/questions/tech/Java",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"questions",
+						"tech",
+						"Java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hiringManagerName\": \"Hiring Manager Name\",\n    \"hiringManagerId\": \"Hiring Manager Id\",\n    \"recruiterName\": \"Recruiter Name\",\n    \"recruiterId\": \"Recruiter Id\",\n    \"candidateName\": \"NewNewCandidate Name\",\n    \"candidateEmailId\": \"Example333@gmail.com\",\n    \"candidateMobileNo\": \"9876543210\",\n    \"candidateExperience\" : \"11\",\n    \"technology\" : \"Java\",\n    \"interviewDate\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/schedule/request",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schedule",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Scheduled Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8083/schedule/request",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"schedule",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Objective Question",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"experience\": \"111-3-5\",\n    \"createdUserid\": \"111-3\",\n    \"statement\": \"111-class A{void m1(){System.out.println(\\\"In m1 A\\\");}}class B extends A{void m1(){System.out.println(\\\"In m1 B\\\");}void m2(){System.out.println(\\\"In m2 B\\\");}}public class Test { public static void main(String[] args) {A a=new B();a.m2();}}\",\n    \"options\": [\n        \"111-In m2 B1111\",\n        \"111-#Compile time error111\",\n        \"111-#Runtime error111\",\n        \"111-#None of the Above111\"\n    ],\n    \"correct_option\": \"111-Compile time error\",\n    \"title\": \"111-Objective Multichoice Questions\",\n    \"difficulty\": \"111-Easy\",\n    \"technology\": \"111-Java\",\n    \"topic\": \"111-Advanced Core Java-1\",\n    \"technologyId\": \"TechX28591X1587931545994\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/update/obj/question/ObjX88268X1587931545994",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"update",
+						"obj",
+						"question",
+						"ObjX88268X1587931545994"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Subj Question",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"experience\": \"6-8\",\n    \"createdUserid\": \"8\",\n    \"statement\": \"1111-Write a java program which will take two numbers and check whether the sum is prime or not.\",\n    \"methodName\": \"1111-checkPrime\",\n    \"junitObj\": null,\n    \"title\": \"1111-Inheritance & Collections\",\n    \"difficulty\": \"1111-Easy\",\n    \"expectedTime\": \"1111-20\",\n    \"technology\": \"1111-Java\",\n    \"topic\": \"1111-Advanced Core Java-1\",\n    \"junitText\": \"1111-Junit Testing\",\n    \"technologyId\": \"TechX28245X1587929838031\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/update/sub/question/SubX45393X1587929838031",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"update",
+						"sub",
+						"question",
+						"SubX45393X1587929838031"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Questions",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"experience\": \"666663-5\",\n    \"type\" : \"subjective\",\n    \"createdUserid\": \"666663\",\n    \"statement\": \"66666Write a java program which will take two numbers and check whether the sum is prime or not.\",\n    \"methodName\": \"66666checkPrime\",\n    \"junitObj\" : null,\n    \"title\" : \"66666Inheritance & Collections\",\n    \"difficulty\" : \"6666Easy\",\n    \"expectedTime\" : \"6666620\",\n    \"technology\" : \"666666Java\",\n    \"topic\" : \"66666Advanced Core Java-1\",\n    \"junitText\" : \"66666Junit Testing\",\n    \"technologyId\": \"TechX2624X1587945237998\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/question/SubX41877X1587945237998",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"question",
+						"SubX41877X1587945237998"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Question By Qid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/question/SubX41877X1587945237998",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"question",
+						"SubX41877X1587945237998"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
